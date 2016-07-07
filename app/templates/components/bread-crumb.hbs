@@ -1,0 +1,8 @@
+    <li class="breadcrumbitem">
+        {{#link-to 'index' class='name'}}Home{{/link-to}}
+    </li>
+    {{#each items as |breadcrumbitem|}}
+    <li class="breadcrumbitem">
+        {{#link-to 'task' breadcrumbitem class='name'}}{{breadcrumbitem.title}}{{/link-to}}
+    </li>
+    {{/each}}            

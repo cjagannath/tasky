@@ -1,0 +1,10 @@
+
+<div class="page">
+    {{#if selectedTask}}
+        {{bread-crumb items=breadcrumbitem}}
+    {{/if}}
+
+    {{task-list model=sortedTasks selectedTask=selectedTask createTaskHandler='createTask' updateTaskHandler='updateTask'}}
+    
+    <a {{action 'createTask'}}>+</a>
+</div>

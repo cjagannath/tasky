@@ -1,0 +1,9 @@
+{{#each model as |item|}}
+    <li class="project" projectid="{{item.id}}" position="{{item.position}}">
+        {{task-item item=item selectedTask=selectedTask createTaskHandler='createTaskHandler' updateTaskHandler='updateTaskHandler' enterHandler='handleEnter' tabHandler='handleTab' upHandler='handleUp' downHandler='handleDown'}}
+        
+        {{task-list model=item.orderedSubtasks selectedTask=selectedTask createTaskHandler='createTaskHandler' updateTaskHandler='updateTaskHandler'}}
+        
+    </li>
+{{/each}}
+

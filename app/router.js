@@ -6,6 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('task', {
+    path: '/task/:task_id'
+  });
 });
 
 export default Router;

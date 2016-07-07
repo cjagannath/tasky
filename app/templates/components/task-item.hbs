@@ -1,0 +1,9 @@
+<div class="name" projectid="{{item.id}}" selectedTask="{{selectedTask.id}}">
+    {{#link-to 'task' item class='bullet'}}{{/link-to}}
+    
+    {{editable-div value=item.title class="content" enterHandler='handleEnter' tabHandler='handleTab' upHandler='handleUp' downHandler='handleDown'}}
+</div>
+<div class="description">
+    <div class="content" contenteditable>{{item.description}}</div>
+</div>
+
